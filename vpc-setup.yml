@@ -9,7 +9,7 @@
       amazon.aws.ec2_vpc_net:
         name: "{{vpc_name}}"
         cidr_block: "{{vpcCidr}}"
-        region: "{{region}}"
+        aws_region: "{{region}}"
         dns_support: true
         dns_hostname: true
         tenancy: default
