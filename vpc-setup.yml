@@ -6,7 +6,7 @@
       include_vars: vars/vpc_setup
 
     - name: Create Vprofile VPC
-      ec2_vpc_net:
+      amazon.aws.ec2_vpc_net:
         name: "{{vpc_name}}"
         cidr_block: "{{vpcCidr}}"
         region: "{{region}}"
