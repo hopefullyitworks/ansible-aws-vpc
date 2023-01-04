@@ -1,6 +1,6 @@
 - hosts: localhost
   connection: local
-  gather_facts: Flase
+  gather_facts: flase
   tasks:
     - name: Import VPC Variables
       include_vars: vars/vpc_setup
