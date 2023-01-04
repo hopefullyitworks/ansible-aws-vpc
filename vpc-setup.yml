@@ -12,8 +12,8 @@
         region: "{{region}}"
         dns_support: true
         dns_hostname: true
-        tenancy: "default"
-        state: ""{{state}}""
+        tenancy: default
+        state: "{{state}}"
 
 
 
