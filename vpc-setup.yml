@@ -11,7 +11,7 @@
         cidr_block: "{{vpcCidr}}"
         aws_region: "{{region}}"
         dns_support: true
-        dns_hostname: true
+        dns_hostnames: true
         tenancy: default
         state: "{{state}}"
 
