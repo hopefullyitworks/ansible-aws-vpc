@@ -98,7 +98,7 @@
         state: "{{state}}"
         tags:
           Name: vprofile_IGW
-      register: privsub3_out
+      register: igw_out
 
 
 
