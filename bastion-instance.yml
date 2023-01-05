@@ -15,7 +15,7 @@
         region: "{{region}}"
       register: key_out
 
-  #  - name: Save private key into file bastion-key.pem
+    - name: Save private key into file bastion-key.pem
       ansible.builtin.copy:
         content: "{{key_out.key.private_key}}"
         dest: "./bastion-key.pem"
@@ -23,7 +23,7 @@
       when: key_out.changed
 
 
-#    - name: Create Security Group for Bastion Host
+    - name: Create Security Group for Bastion Host
       amazon.aws.ec2_security_group:
         name: BastionHostSG
         description: Allow port 22 from everywhere and all port within sg
