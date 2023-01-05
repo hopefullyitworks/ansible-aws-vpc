@@ -20,11 +20,11 @@
 
 
     - name: Save private key into file bastion-key.pem
-        ansible.builtin.copy:
-          content: "{{key_out.key.private_key}}"
-          dest:  "./bastion-key.pem"
-          mode: 0600
-        when: key_out.changed
+      ansible.builtin.copy:
+        content: "{{key_out.key.private_key}}"
+        dest: "./bastion-key.pem"
+        mode: 0600
+      when: key_out.changed
 
 
 
