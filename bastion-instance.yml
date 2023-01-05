@@ -15,10 +15,6 @@
         region: "{{region}}"
       register: key_out
 
-#-  debug:
-#        var: key_out
-
-
     - name: Save private key into file bastion-key.pem
       ansible.builtin.copy:
         content: "{{key_out.key.private_key}}"
