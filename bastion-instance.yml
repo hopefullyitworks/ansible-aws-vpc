@@ -7,7 +7,7 @@
       include_vars: vars/bastion_setup
 
     - name: Import VPC Setup Variable
-      include_vars: vars/output_setup
+      include_vars: vars/output_vars
 
     - name: Create vprofile EC2 key
       amazon.aws.ec2_key:
