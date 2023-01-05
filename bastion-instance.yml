@@ -11,19 +11,19 @@
 
     - name: Create vprofile EC2 key
       amazon.aws.ec2_key:
-        name: vprofile-key1
+        name: vprofile-key2
         region: "{{region}}"
       register: key_out
 
     - debug:
         var: key_out
 
-  #  - name: Save private key into file bastion-key.pem
-   #   ansible.builtin.copy:
-    #    content: "{{key_out.key.private_key}}"
-     #   dest: "./bastion-key.pem"
-      #  mode: 0600
-     # when: key_out.changed
+    - name: Save private key into file bastion-key.pem
+      ansible.builtin.copy:
+        content: "{{key_out.key.private_key}}"
+        dest: "./bastion-key.pem"
+        mode: 0600
+      when: key_out.changed
 
 
     - name: Create Security Group for Bastion Host
