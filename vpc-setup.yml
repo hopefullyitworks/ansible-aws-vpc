@@ -154,7 +154,7 @@
         - NATGW_out.nat_gateway_id
         - privRT_out.route_table.id
 
-    - set_facts:
+    - set_fact:
         vpcid: "{{vpcout.vpc.id}}"
         pubsub1id: "{{pubsub1_out.subnet.id}}"
         pubsub2id: "{{pubsub2_out.subnet.id}}"
