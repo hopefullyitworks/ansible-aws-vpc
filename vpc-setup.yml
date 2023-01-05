@@ -170,5 +170,5 @@
 
     - name: Create variables file for VPC output
       ansible.builtin.copy:
-        content: 'vpcid: {{vpcout.vpc.id}} \\n pubsub1id: {{pubsub1_out.subnet.id}} \n pubsub2id: {{pubsub2_out.subnet.id}} \n pubsub3id: {{pubsub3_out.subnet.id}} \n privsub1id: {{privsub1_out.subnet.id}} \n privsub2id: {{privsub2_out.subnet.id}} \n privsub3id: {{privsub3_out.subnet.id}} \n igwid: {{igw_out.gateway_id}} \n pubRTid: {{pubRT_out.route_table.id}} \n NATGWid: {{NATGW_out.nat_gateway_id}} \n privRTid: {{privRT_out.route_table.id}}'
+        content: 'vpcid: {{vpcout.vpc.id}} \n pubsub1id: {{pubsub1_out.subnet.id}} \n pubsub2id: {{pubsub2_out.subnet.id}} \n pubsub3id: {{pubsub3_out.subnet.id}} \n privsub1id: {{privsub1_out.subnet.id}} \n privsub2id: {{privsub2_out.subnet.id}} \n privsub3id: {{privsub3_out.subnet.id}} \n igwid: {{igw_out.gateway_id}} \n pubRTid: {{pubRT_out.route_table.id}} \n NATGWid: {{NATGW_out.nat_gateway_id}} \n privRTid: {{privRT_out.route_table.id}}'
         dest: vars/output_vars
